@@ -22,23 +22,6 @@ func (h *Header) Render() app.UI {
 				OnChange(h.ValueTo(&h.Address)),
 		).Style("width", "10em").Style("margin-right", "auto"),
 
-		// Net Version
-		app.H1().Body(
-			app.Text("Get Net Version"),
-		).Style("width", "10em").Style("margin-left", "auto").Style("margin-right", "auto"),
-		app.Div().Body(
-			app.Div().Body(
-				app.Button().Text("ChainID").OnClick(h.ChainID).Style("float", "right").Style("height", "200px").Style("width", "500px"),
-				app.Div().Body(
-					app.H2().Text("Network id: "),
-					app.If(h.ChainId != "",
-						app.H2().Text(h.ChainId),
-					).Else(
-						app.H2().Text("None"),
-					)).Style("overflow", "hidden").Style("height", "200px").Style("width", "300px"),
-			),
-		).Style("background-color", "deepskyblue").Style("display", "table").Style("clear", "both").Style("display", "block").Style("height", "200px"),
-
 		// Block Number
 		app.H1().Body(
 			app.Text("Request BlockNumber"),

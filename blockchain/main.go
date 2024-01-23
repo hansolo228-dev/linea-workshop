@@ -67,7 +67,7 @@ func ChainID(address string) string {
 	// JSON body
 	body := []byte(`{
 		"jsonrpc": "2.0",
-		"method": "net_version",
+		"method": "eth_syncing",
 		"params": [],
 		"id": "getblock.io"
 	}`)
